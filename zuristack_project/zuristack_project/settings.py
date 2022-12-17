@@ -18,19 +18,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATE_DIR =os.path.join(BASE_DIR, 'templates')
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 
+
+AUTH_USER_MODEL = 'accounts.CustomUser'
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config("DJANGO_SECRET_KEY", default='django-insecure-b5t_16^ej42@=#$ab=3!x+1qy@$0so!2$n*w=q$^bkes$-b0b7')
-print(SECRET_KEY, '\n')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DJANGO_DEBUG", default=True, cast=bool)
-print(DEBUG, '\n')
 
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
